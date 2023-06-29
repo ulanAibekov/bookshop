@@ -1,0 +1,130 @@
+#genres {
+  padding-top: 50px;
+  .text{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 60px;
+    h1 {
+      font-weight: 500;
+      font-size: 48px;
+      color: #19272E;
+      display: flex;
+      flex-direction: column;
+      padding: 15px 0;
+    }
+    a{
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      color: #818EEA;
+    }
+  }
+  .genres {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &--bg {
+      width: 150px;
+      height: 195px;
+      background: #F5F5F5;
+      border: 1px solid #E1E1E1;
+      border-radius: 16px;
+      margin-right: 20px;
+
+      &__img {
+      gap: 10px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          padding-top: 24px;
+          font-weight: 500;
+          font-size: 18px;
+          color: #19272E;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1050px){
+  #genres {
+    &--bg {
+      width: 150px;
+      height: 195px;
+
+      &__img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          padding-top: 24px;
+          font-weight: 500;
+          font-size: 18px;
+          color: #19272E;
+        }
+      }
+    }
+    .text {
+      h1 {
+        font-weight: 500;
+        font-size: 48px;
+        color: #19272E;
+        display: flex;
+        flex-direction: column;
+        padding: 15px 0;
+      }
+    }
+    .genres--bg{
+      margin-bottom: 40px;
+      &__img{
+        width: 150px;
+      }
+
+    }
+    .genres {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 20px 0;
+    }
+  }
+}
+
+@media (max-width: 578px) {
+
+  #genres {
+    &--bg {
+      border: 1px solid #E1E1E1;
+      border-radius: 16px;
+      margin-right: 20px;
+
+      &__img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          padding-top: 24px;
+          font-weight: 500;
+          font-size: 18px;
+          color: #19272E;
+        }
+      }
+    }
+    .text {
+      padding-bottom: 10px;
+      h1 {
+        font-weight: 400;
+        font-size: 24px;
+      }
+      h2{
+        font-size: 16px;
+      }
+    }
+  }
+}

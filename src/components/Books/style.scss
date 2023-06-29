@@ -1,0 +1,138 @@
+.books {
+  padding-top: 100px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+      font-weight: 500;
+      font-size: 48px;
+      text-align: center;
+      color: #19272e;
+    }
+    a {
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+      text-align: center;
+      color: #818eea;
+    }
+  }
+
+  img {
+    width: 200px;
+    height: 300px;
+    border-radius: 8px;
+  }
+
+  &__anyBooks {
+    display: flex;
+    padding: 80px 0;
+    gap: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 30px;
+  }
+  &__anyBooks::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    background-color: #f5f5f5;
+  }
+
+  &__anyBooks::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 5px;
+  }
+
+  &__anyBooks::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+  }
+
+    .book {
+      width: 200px;
+
+      h2 {
+        font-weight: 700;
+        font-size: 22px;
+        color: #19272e;
+        width: 150px;
+        padding: 12px 0;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        color: #19272e;
+      }
+    }
+  }
+
+
+@media (max-width: 926px) {
+  .books{
+    &__title {
+      display: flex;
+      justify-content: space-between;
+
+      h1 {
+        font-weight: 500;
+        font-size: 34px;
+        color: #19272e;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 18px;
+        color: #818eea;
+      }
+    }
+    img {
+      width: 180px;
+      height: 260px;
+    }
+  }
+}
+@media(max-width: 576px) {
+  .books{
+    &__title {
+      display: flex;
+      justify-content: space-between;
+
+      h1 {
+        font-weight: 500;
+        font-size: 24px;
+        color: #19272e;
+      }
+
+      a {
+        font-weight: 500;
+        font-size: 16px;
+        color: #818eea;
+      }
+    }
+    img {
+      width: 150px;
+      height: 220px;
+    }
+    &__anyBooks {
+      display: flex;
+      padding: 80px 0 0 0;
+
+      .book {
+
+        h2 {
+          font-weight: 700;
+          font-size: 16px;
+          padding: 20px 0;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          opacity: 0.7;
+        }
+      }
+    }
+}
+}
