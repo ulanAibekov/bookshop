@@ -2,21 +2,23 @@
   margin-top: 32px;
   .fon{
   background: url("../../img/The.png") no-repeat center/cover;
-  min-height: 100vh;
-  }
+  margin: 35px 0;
+  padding: 80px;
   .book {
-    padding-top: 240px;
-
+    padding: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h1 {
-      font-weight: 700;
-      font-size: 48px;
+      font-weight: 600;
+      font-size: 45px;
       color: #FFFFFF;
       align-items: center;
       text-align: center;
+      margin: 20px 0;
       margin-bottom: 16px;
     }
-
-    h5 {
+    p {
       text-align: center;
       font-weight: 400;
       font-size: 18px;
@@ -26,118 +28,131 @@
 }
 
 
-@media (max-width: 1440px) {
-  .container{
-    width: 90%;
-  }
-}
-@media (max-width: 1200px) {
-
-}
-@media (max-width: 1140px) {
-
-}
-@media (max-width: 1024px) {
-  #book {
-    .fon{
-      .book{
-        h1 {
-          font-size: 45px;
-        }
-      }
-    }
-  }
-}
 @media (max-width: 992px) {
-  #book {
-    .fon{
+  #book{
+    .container{
       .book{
-        h1 {
+        h1{
           font-size: 40px;
         }
-        h5{
-          font-size: 16px;
-        }
       }
     }
   }
+
 }
+
+
 @media (max-width: 768px) {
-  #book {
-    .fon{
+  #book{
+    padding: 0;
+
+    .container{
       .book{
-        h1 {
+        h1{
           font-size: 35px;
         }
-        h5{
-          font-size: 15px;
+      }
+    }
+  }
+
+}
+@media (max-width: 755px) {
+  #book{
+    padding: 0;
+
+    .container{
+      .book{
+        h1{
+          font-size: 26px;
         }
       }
     }
   }
+
 }
 @media (max-width: 576px) {
-  #book {
-    .fon{
-      min-height: 58vh;
+  #book{
+    padding: 0;
+
+    .container{
       .book{
-        padding-top: 155px;
-        h1 {
-          font-size: 28px;
+        h1{
+          font-size: 27px;
         }
-        h5{
-          font-size: 13px;
+        p{
+          margin: 0 60px;
         }
       }
     }
   }
+
 }
 @media (max-width: 451px) {
-  #book {
-    .fon{
-      min-height: 45vh;
+  #book{
+    padding: 0;
+
+    .container{
       .book{
-        padding-top: 120px;
-        h1 {
-          font-size: 23px;
+        h1{
+          font-size: 25px;
         }
-        h5{
-          font-size: 11px;
-        }
+p{
+  font-size: 16px;
+  margin: 0 50px;
+}
       }
     }
   }
+
 }
 @media (max-width: 400px) {
-  #book {
-    .fon{
+  #book{
+    padding: 0;
+
+    .container{
       .book{
-        h1 {
+        h1{
           font-size: 20px;
         }
-        h5{
-          font-size: 10px;
+        p{
+          font-size: 15px;
+          margin: 0 20px;
+        }
+
+      }
+    }
+  }
+
+}
+@media (max-width: 376px) {
+  #book{
+    padding: 0;
+    .container{
+      .book{
+        h1{
+          font-size: 20px;
+        }
+        p{
+          margin: 0 40px;
         }
       }
     }
   }
-}
-@media (max-width: 376px) {
 
 }
 @media (max-width: 320px) {
-  #book {
-    .fon{
-      min-height: 35vh;
+  #book{
+    padding: 0;
+    .container{
       .book{
-        padding-top: 90px;
-        h1 {
-          font-size: 16px;
+        h1{
+          font-size: 20px;
         }
-        h5{
-          font-size: 8px;
+        p{
+
         }
       }
     }
   }
+
 }
