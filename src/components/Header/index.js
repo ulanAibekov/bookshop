@@ -9,27 +9,17 @@ const Header = () => {
     const [search, setSearch] = useState(true);
     const [nav, setNav] = useState(false);
     return (
-
         <div id='header'>
             <div className='container'>
                 <div className='header'>
                     <div className='header--title'>
-                        <NavLink to={'/'}>
-                            Bookshop
-                        </NavLink>
+                        <a className="a"
+                          href="#">Bookshop</a>
                         <div className={nav ? 'header--nav active' : 'header--nav'}>
-                            <NavLink className='fz' to={'/genres'}>
-                                Categories
-                            </NavLink>
-                            <NavLink to={'/NewBooks'}>
-                                Recent
-                            </NavLink>
-                            <NavLink to={'/books'}>
-                                Books
-                            </NavLink>
-                            <NavLink to={'/aboutUs'}>
-                                About Us
-                            </NavLink>
+                            <a href="#genres">Categories</a>
+                            <a href="#books">Recent</a>
+                            <a href="#newBooks">Books</a>
+                            <a href="#aboutUs">About Us</a>
                         </div>
                     </div>
                     <nav className='header--search'>
@@ -62,6 +52,8 @@ const Header = () => {
                 </div>
             </div>
         </div>
+
+
     );
 };
 

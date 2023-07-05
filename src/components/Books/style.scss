@@ -33,11 +33,15 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 30px;
+    &::-webkit-scrollbar{
+      display: none;
+    }
   }
   &__anyBooks::-webkit-scrollbar {
     width: 5px;
     height: 5px;
     background-color: #f5f5f5;
+
   }
 
   &__anyBooks::-webkit-scrollbar-thumb {
@@ -54,7 +58,7 @@
 
       h2 {
         font-weight: 700;
-        font-size: 22px;
+        font-size: 15px;
         color: #19272e;
         width: 150px;
         padding: 12px 0;

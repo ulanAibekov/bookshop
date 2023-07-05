@@ -20,6 +20,7 @@ const Books = () => {
   }, []);
 
   return (
+      <div id='newBooks'>
     <div className="container">
       <div className="books">
         <div className="books__title">
@@ -48,6 +49,7 @@ const Books = () => {
         </div>
       </div>
     </div>
+      </div>
   );
 };
 
