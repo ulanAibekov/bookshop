@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './style.scss'
+import './index.scss'
 import axios from "axios";
 import {useNavigate, useParams} from "react-router";
 import {AiOutlineHeart, AiOutlinePlus} from "react-icons/ai";
@@ -8,6 +8,7 @@ import {Link} from "react-router-dom";
 import Modal from "../Modal";
 import DetailBooks from "../DetailBooks";
 import {BsTelegram} from "react-icons/bs";
+import Modal1 from "../Modal1";
 
 
 const API_KEY = 'AIzaSyD1z1aKy9_iFzifYabztZePoe4Z-OsPU0Q'
@@ -33,6 +34,7 @@ const DetailPage = ({count,setCount, price ,setPrice}) => {
         axios.get(`https://www.googleapis.com/books/v1/volumes/${id}?key=${API_KEY}`)
             .then(response => {
                 setBook(response.data);
+                console.log(response.data)
             })
             .catch(error => console.error(error));
     }, [id]);
@@ -47,8 +49,10 @@ const DetailPage = ({count,setCount, price ,setPrice}) => {
     };
 
     const decrementCount = () => {
-        setCount(count - 1);
-        setPrice(price - 99)
+        if (count > 0){
+            setCount(count - 1 );
+            setPrice(price - 99 )
+        }
     };
 
 
@@ -61,7 +65,7 @@ const DetailPage = ({count,setCount, price ,setPrice}) => {
     };
 
     function navigateToBasket(id) {
-        window.scrollTo(0, 0)
+        // window.scrollTo(0, 0)
             navigate(`/detailBooks/${id}`)
     }
 
@@ -85,9 +89,7 @@ const DetailPage = ({count,setCount, price ,setPrice}) => {
                         <a href="/DetailBooks">
                             <AiOutlineHeart size={"2rem"} className="heartIcon"/>
                         </a>
-                        <p onClick={handleOpenModal}>
-                            <HiOutlineShare size={"2rem"} className="shateIcon"/>
-                        </p>
+                        <p onClick={handleOpenModal}><HiOutlineShare size={"2rem"} className="shateIcon"/></p>
                         <Modal isOpen={isOpen} onClose={handleCloseModal}>
                             <h2>Поделится книгой</h2>
                             <img className="detailMain__img"
