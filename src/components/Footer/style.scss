@@ -108,14 +108,13 @@
       opacity: .175;
     }
     &--icons {
-      font-size: 22px ;
       color: rgba(255, 255, 255, 0.71);
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 20px;
       padding: 15px 0;
-      transition: .5s;
+      transition: .3s;
       &__ai {
         width: 35px;
         height: 35px;
@@ -123,6 +122,9 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        .bs {
+          font-size: 22px;
+        }
       }
       &__ai:hover {
         background: #9ba5ee;
@@ -164,7 +166,7 @@
         }
 
         p {
-          font-size: 15px;
+          font-size: 16px;
         }
       }
     }
@@ -184,7 +186,19 @@
         h2 {
           font-size: 19px;
         }
+      }
 
+        &--icons {
+          gap: 15px;
+          &__ai {
+            .bs {
+              font-size: 19px !important;
+            }
+          }
+        }
+      .title {
+        margin-top: 25px;
+        font-size: 14px;
       }
     }
   }

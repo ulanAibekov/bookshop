@@ -67,7 +67,7 @@ const DetailPage = ({count,setCount, price ,setPrice}) => {
 
 
     return (
-        <div>
+        <div className='container'>
             {/*{books.map(book => (*/}
             <div className="detailMain" key={book.id}>
 
@@ -113,11 +113,11 @@ const DetailPage = ({count,setCount, price ,setPrice}) => {
                     {/*<button onClick={() => getBookPrice(book.id)}>Get Price</button>*/}
                     {/*{bookPrice && <p>Price: {bookPrice}</p>}*/}
                     <p className="detailMain__info--price">$ {price}</p>
-                    <div style={{
+                    <div className='detailMain__info--card' style={{
                         display:"flex",
                         alignItems:"center",
-                        justifyContent:"space-between",
-                        width:"83%"
+                        // justifyContent:"space-between",
+                        // width:"83%"
                     }}>
 
                         <button className='detailMain__info--btn' onClick={() => navigateToBasket(book?.id)}>Add to
