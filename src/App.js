@@ -20,7 +20,6 @@ function App() {
         <Header/>
         <Routes>
             <Route path="/" element={<Home/>} />
-
             <Route path={"/genres"} element={<Genres/>}/>
             <Route path={"/NewBooks"} element={<NewBooks/>} />
             <Route path={"/books"} element={<Books/>}/>
