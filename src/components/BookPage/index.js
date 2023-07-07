@@ -237,6 +237,7 @@ const BooksPage = () => {
                         </div>
                         {/* Остальные фильтры */}
                     </div>
+
                 </div>
             </div>
         </div>
