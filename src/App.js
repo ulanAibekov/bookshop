@@ -28,7 +28,7 @@ function App() {
             <Route path={"/aboutUs"} element={<AboutUs/>}/>
             <Route path="/BookPage" element={<BookPage/>} />
             <Route path="/DetailPage/:id" element={<DetailPage setBooksDetail={setBooksDetail} booksDetail={booksDetail} count={count} setCount={setCount} price={price} setPrice={setPrice}/>} />
-            <Route path={"/DetailBooks"} element={<DetailBooks setBooksDetail={setBooksDetail} booksDetail={booksDetail} count={count} setCount={setCount} price={price} setPrice={setPrice}/>} />
+            <Route path={"/detailBooks/:id"} element={<DetailBooks setBooksDetail={setBooksDetail} booksDetail={booksDetail} count={count} setCount={setCount} price={price} setPrice={setPrice}/>} />
         </Routes>
         <Footer/>
     </div>
