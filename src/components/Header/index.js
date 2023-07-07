@@ -18,7 +18,7 @@ const Header = () => {
                         <div className={nav ? 'header--nav active' : 'header--nav'}>
                             <a href="#genres">Categories</a>
                             <a href="#books">Recent</a>
-                            <a href="#newBooks">Books</a>
+                            <NavLink to="/NewBooks">Books</NavLink>
                             <a href="#aboutUs">About Us</a>
                         </div>
                     </div>

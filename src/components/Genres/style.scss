@@ -15,8 +15,8 @@
     }
     a{
       text-decoration: none;
-      font-weight: 500;
-      font-size: 18px;
+      font-weight: 200;
+      font-size: 12px;
       color: #818EEA;
     }
   }
@@ -31,10 +31,13 @@
       border: 1px solid #E1E1E1;
       border-radius: 16px;
       margin-right: 20px;
-
+      transition: .3s;
+      &:hover{
+        box-shadow: 0 0 10px black;
+        transform: translateY(-20px);
+      }
       &__img {
       gap: 10px;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -90,6 +93,9 @@
       flex-wrap: nowrap;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
+      &::-webkit-scrollbar{
+        display: none;
+      }
       padding: 20px 0;
     }
   }

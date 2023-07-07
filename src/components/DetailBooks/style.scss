@@ -1,3 +1,5 @@
+
+
 #detail {
   padding-top: 50px;
 
@@ -26,8 +28,8 @@
       letter-spacing: -0.2px;
       color: #19272E;
 
-      span {
-        color: #818EEA;
+      h5 {
+        color: #6d6d6e;
       }
     }
   }
@@ -119,143 +121,199 @@
     }
 
     &--select {
+      margin-top: 30px;
+
       h1 {
         font-weight: 600;
         font-size: 22px;
         letter-spacing: -0.55px;
         color: #19272E;
+        margin-bottom: 40px;
       }
+&__block1{
+ 
+  &--text1{ 
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  padding:20px 0 10px 0;
+  cursor: pointer ;
 
-      &__shipping {
-        display: flex;
+    h2{
+      color: #19272E;
+      font-family: Public Sans;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    p{
+      color: #19272E;
+text-align: right;
+font-size: 16px;
+font-style: normal;
+font-family: Public Sans;
+font-weight: 400;
+line-height: normal;
+    }
+  }
+ 
+  &--inputs1{
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    input{
+      display: flex;
+      width: 100%;
+      height: 40px;
+      margin: 10px 0;
+      border: 2px solid rgba(0, 0, 255, 0.459);
+      border-radius: 5px;
+      outline: none;
+      padding-left: 20px;
+    }
+    button{
+      width: 100%;
+      height: 40px;
+      background: rgba(37, 0, 78, 0.747);
+      color: wheat;
+      border: none;
+      border-radius: 10px;
+    }
+  }
 
-        padding: 10px 0;
-        gap: 150px;
 
-        p {
-          font-weight: 400;
-          font-size: 16px;
-          letter-spacing: -0.1px;
-          color: #0D0D0D;
-          padding: 17px 0;
-        }
-
-        &--send {
-          background: #19272E;
-          border-radius: 8px;
-          border: none;
-          font-weight: 600;
-          font-size: 16px;
-          text-align: center;
-          letter-spacing: -.4px;
-          color: #FFFFFF;
-          width: 390px;
-          height: 50px;
-          margin: 10px 0;
-          transition: 0.4s;
-
-          &:hover {
-            background: #818EEA;
-            color: yellow;
-          }
-        }
-
-        details {
-          border-bottom: 2px solid #19272E;
-          cursor: pointer;
-          width: 100%;
-
-          & {
-            select {
-              padding: 5px 10px;
-              outline: none;
-              border: 2px solid #818EEA;
-              font-family: sans-serif;
-
-              option {
-                outline: none;
-              }
-            }
-
-            input {
-              border: 2px solid #818EEA;
-              border-radius: 5px;
-              width: 100%;
-              height: 40px;
-              margin: 5px 0;
-              padding: 0 10px;
-              outline: #818EEA;
-            }
-
-          }
-
-          summary {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-          }
-        }
-
-        h5 {
-          font-weight: 400;
-          font-size: 17px;
-          color: #19272E;
-          display: flex;
-          align-items: center;
-        }
-
-        //
-        //select {
-        //  font-weight: 400;
-        //  font-size: 16px;
-        //  color: #19272E;
-        //  border: none;
-        //}
+}
+&__block2{
+  
+  &--text2{ cursor: pointer;
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid #000;
+  padding:30px 0 10px 0;
+    h2{
+      color: #19272E;
+font-family: Public Sans;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+    p{
+      color: #19272E;
+text-align: right;
+font-family: Public Sans;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    }
+  }
+  &--inputs2{
+    display: flex ; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .colum {
+      display: flex;
+      flex-direction: column;
+      input{
+      width: 100%;
+      height: 40px;
+      margin: 3px 0;
+      border: 2px solid rgba(0, 0, 255, 0.459);
+      border-radius: 5px;
+      outline: none;
+      padding-left: 20px;
       }
+    }
+    select{
+      display: flex;
+      width: 100%;
+      height: 40px;
+      margin:15px 0 5px 0;
+      border: 2px solid rgba(0, 0, 255, 0.459);
+      border-radius: 5px;
 
-      &__total {
-        display: flex;
+  option{
+    color: #19272E;
+    font-family: Public Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.356px;
+    outline: none;
+  }
+     
+    }
+    &__group{
+      display: flex;
+        align-items: center;
         justify-content: space-between;
-        padding: 20px 0;
-
-        h1 {
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 16px;
-          letter-spacing: -0.3px;
-          color: #0D0D0D;
-        }
-
-        h3 {
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 16px;
-          letter-spacing: -0.3px;
-          color: #818EEA;
-        }
-      }
-
-      &__btn {
-        background: #818EEA;
-        border-radius: 8px;
-        border: none;
-        font-weight: 600;
-        font-size: 16px;
-        text-align: center;
-        letter-spacing: -.4px;
-        color: #FFFFFF;
-        width: 390px;
-        height: 50px;
-        padding-top: 10px;
-
-
-        &:hover {
-          background: black;
-          color: white;
-          transition: 0.4s;
-        }
+      input{
+        width: 120px;
+        height: 40px;
+        border: 2px solid rgba(0, 0, 255, 0.459);
+        border-radius: 5px;
+        margin-top: 3px;
+        padding-left: 20px;
       }
     }
   }
+    
 }
+
+&__total {
+  display: flex;
+  align-items: center !important;
+  justify-content: space-between;
+  padding: 20px 0;
+
+  h1 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.3px;
+    color: #0D0D0D;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.3px;
+    color: #818EEA;
+  }
+}
+&__btn {
+  background: #818EEA;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  letter-spacing: -.4px;
+  color: #FFFFFF;
+  width: 390px;
+  height: 50px;
+  padding-top: 10px;
+
+
+  &:hover {
+    background: black;
+    color: white;
+    transition: 0.4s;
+  }
+}
+}
+
+    }
+  }
+
 
