@@ -47,7 +47,7 @@ const Header = () => {
                         </NavLink>
                     </nav>
                     <div onClick={() => setNav(!nav)} className='mobile_btn'>
-                        {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
+                        {nav ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25   } />}
                     </div>
                 </div>
             </div>
