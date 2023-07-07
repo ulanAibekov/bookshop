@@ -1,9 +1,10 @@
 .books {
-  padding-top: 100px;
+  padding-top: 112px;
 
   &__title {
     display: flex;
     justify-content: space-between;
+    align-items: end;
 
     h1 {
       font-weight: 500;
@@ -15,8 +16,8 @@
       text-decoration: none;
       font-weight: 500;
       font-size: 18px;
-      text-align: center;
       color: #818eea;
+      margin-right: 70px;
     }
   }
 
@@ -28,11 +29,10 @@
 
   &__anyBooks {
     display: flex;
-    padding: 80px 0;
+    padding: 80px 0 0 0;
     gap: 40px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    padding-bottom: 30px;
     &::-webkit-scrollbar{
       display: none;
     }
@@ -58,20 +58,29 @@
 
       h2 {
         font-weight: 700;
-        font-size: 15px;
+        font-size: 18px;
         color: #19272e;
-        width: 150px;
-        padding: 12px 0;
+        padding: 8px 0 8px 0
       }
 
       p {
         font-weight: 400;
         font-size: 16px;
         color: #19272e;
+        opacity: 0.699999988079071;
       }
     }
   }
 
+@media (max-width: 1024px) {
+  .books {
+    &__title {
+      a {
+        margin-right: 0;
+      }
+    }
+  }
+}
 
 @media (max-width: 926px) {
   .books{
@@ -81,7 +90,7 @@
 
       h1 {
         font-weight: 500;
-        font-size: 34px;
+        font-size: 44px;
         color: #19272e;
       }
 
@@ -99,6 +108,7 @@
 }
 @media(max-width: 576px) {
   .books{
+    padding-top: 80px;
     &__title {
       display: flex;
       justify-content: space-between;
@@ -121,14 +131,13 @@
     }
     &__anyBooks {
       display: flex;
-      padding: 80px 0 0 0;
+      padding: 34px 0 0 0;
 
       .book {
 
         h2 {
           font-weight: 700;
           font-size: 16px;
-          padding: 20px 0;
         }
 
         p {

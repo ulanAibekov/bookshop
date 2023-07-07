@@ -1,18 +1,25 @@
-#books {
+#newBooks {
   //padding-top: 0;
   .new {
-    margin-top: 136px;
+    margin-top: 112px;
+    margin-bottom: 64px;
     font-weight: 500;
     font-size: 48px;
     text-align: center;
     color: #19272E;
   }
-  .books {
+  .newBooks {
     display: flex;
     justify-content: center;
     gap: 64px;
+    padding-bottom: 24px;
     &__content{
       width: 200px;
+      img {
+        width: 200px;
+        height: 300px;
+        border-radius: 8px;
+      }
       &:nth-child(1){
         padding-top: 40px;
       } &:nth-child(3){
@@ -38,52 +45,82 @@
 }
 
 @media (max-width: 926px) {
-  #books .books{
+  #newBooks {
+    .new {
+      font-size: 44px;
+    }
+  .newBooks {
     display: flex;
     justify-content: center;
     gap: 20px;
-    img{
+
+    img {
       width: 180px;
       height: 260px;
       margin: 0 auto;
     }
+  }
+  }
 }
-   #bottom .new{
-    font-size: 34px;
+
+@media (max-width: 650px) {
+  #newBooks .newBooks {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    &__content {
+      &:nth-child(1){
+        padding-top: 0;
+      } &:nth-child(3){
+          padding-top: 0;
+        }
     }
+  }
 }
+
 @media(max-width: 576px) {
-  #books .books {
+  #newBooks {
+    .new {
+      margin-top: 64px;
+      margin-bottom: 32px;
+      font-size: 24px;
+    }
+  }
+  .newBooks {
     overflow-x: scroll;
     padding: 20px 0;
     margin: 15px -25px;
     scroll-snap-type: x mandatory;
-    img{
-      width: 150px;
-      height: 220px;
+
+    img {
+      width: 150px !important;
+      height: 220px !important;
       margin: 0 auto;
     }
-    &__content{
+
+    &__content {
       display: flex;
       flex-direction: column;
       justify-content: end;
-      &:nth-child(1){
-        margin-bottom: 112px;
-      } &:nth-child(2){
-          padding-bottom: 74px;
-        }
-      h2{
-        font-weight: 700;
-        font-size: 16px;
+
+      //&:nth-child(1) {
+      //  margin-bottom: 112px;
+      //}
+      //
+      //&:nth-child(2) {
+      //  padding-bottom: 74px;
+      //}
+
+      h2 {
+        font-size: 16px !important;
       }
-      p{
-        font-weight: 400;
-        font-size: 16px;
+
+      p {
+        font-size: 16px !important;
         opacity: 0.7;
       }
     }
-  }
-  #books .new{
-    font-size: 24px;
   }
 }

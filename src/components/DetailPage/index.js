@@ -78,6 +78,81 @@ const DetailPage = ({
       count,
       price,
     };
+
+    function navigateToBasket(id) {
+        // window.scrollTo(0, 0)
+            navigate(`/detailBooks/${id}`)
+    }
+
+
+    return (
+        <div id='detailMain'>
+            <div className="container">
+                {/*{books.map(book => (*/}
+                <div className="detailMain" key={book.id}>
+
+                    <img className="detailMain__img"
+                         src={
+                             book.volumeInfo.imageLinks
+                                 ? book.volumeInfo.imageLinks.thumbnail
+                                 : 'https://via.placeholder.com/150x200?text=No+Image'
+                         }
+                         alt={book.volumeInfo.title}
+                    />
+                    <div className="detailMain__info">
+                        <div className="detailMain__info--title">
+                            <h1>{book.volumeInfo.title}</h1>
+                            <div className='detail-icons'>
+                                <a href="/DetailBooks">
+                                    <AiOutlineHeart size={"2rem"} className="heartIcon"/>
+                                </a>
+                                <p onClick={handleOpenModal}><HiOutlineShare size={"2rem"} className="shateIcon"/></p>
+                            </div>
+
+                            <Modal isOpen={isOpen} onClose={handleCloseModal}>
+                                <h2>Поделится книгой</h2>
+                                <img className="detailMain__img"
+                                     src={
+                                         book.volumeInfo.imageLinks
+                                             ? book.volumeInfo.imageLinks.thumbnail
+                                             : 'https://via.placeholder.com/150x200?text=No+Image'
+                                     }
+                                     alt={book.volumeInfo.title}
+                                />
+                                <p>{book.volumeInfo.title}</p>
+                                <a href=""><BsTelegram/></a>
+                            </Modal>
+
+
+                        </div>
+
+
+                        <p>Author: {book.volumeInfo.authors}</p>
+                        <p>Published Date: {book.volumeInfo.publishedDate}</p>
+                        <p className='detailMain__info--desc'>Description: {book.volumeInfo.description.slice(0,100)}</p>
+
+                        {/*<button onClick={() => getBookPrice(book.id)}>Get Price</button>*/}
+                        {/*{bookPrice && <p>Price: {bookPrice}</p>}*/}
+                        <p className="detailMain__info--price">$ {price}</p>
+                        <div className='detailMain__info--card' style={{
+                            display: "flex",
+                            alignItems: "center",
+                            // justifyContent:"space-between",
+                            // width:"83%"
+                        }}>
+
+                            <button className='detailMain__info--btn' onClick={() => navigateToBasket(book?.id)}>Add to
+                                Cart
+                            </button>
+                            <div className="detailMain__info--count">
+                                <button onClick={decrementCount}>-</button>
+                                <p>{count}</p>
+                                <button onClick={incrementCount}>+</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
     localStorage.setItem(
       "bookL",
       JSON.stringify([...booksDetail, { ...newBooks }])
