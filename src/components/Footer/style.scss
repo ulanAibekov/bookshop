@@ -19,6 +19,7 @@
           font-size: 36px;
           line-height: 44px;
           color: #FFFFFF;
+          letter-spacing: -1.5px;
         }
 
         p {
@@ -26,6 +27,7 @@
           font-size: 14px;
           color: #FFFFFF;
           padding: 15px 0;
+          letter-spacing: -0.3px;
         }
 
         input {
@@ -146,6 +148,20 @@
       &--block {
         flex-wrap: wrap;
         gap: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 926px) {
+  #footer {
+    .footer {
+      &--block {
+        &__sing {
+          h1 {
+            font-size: 34px;
+          }
+        }
       }
     }
   }

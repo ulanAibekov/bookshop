@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import "./style.scss"
+import './style.scss'
 import axios from "axios";
 import { Link } from "react-router-dom";
 const API_KEY = 'AIzaSyD1z1aKy9_iFzifYabztZePoe4Z-OsPU0Q'
@@ -21,15 +21,15 @@ const NewBooks = () => {
     return (
         <>
             {" "}
-            <div id="books">
+            <div id="newBooks">
                 {" "}
                 <div className="container">
                     {" "}
                     <h1 className="new">New Books</h1>{" "}
-                    <div className="books">
+                    <div className="newBooks">
                         {" "}
                         {books.map((book) => (
-                            <div className='books__content' key={book.id}>
+                            <div className='newBooks__content' key={book.id}>
                                 {" "}
                                 <Link to={`/DetailPage/${book.id}`}>
                                     {" "}

@@ -20,7 +20,7 @@ const Books = () => {
   }, []);
 
   return (
-      <div id='newBooks'>
+      <div id='books'>
     <div className="container">
       <div className="books">
         <div className="books__title">
