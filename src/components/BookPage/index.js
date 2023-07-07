@@ -8,6 +8,17 @@ import Blue from '../../img/Blueue.png'
 import Slider from "react-slick";
 import { GoSettings } from "react-icons/go";
 import {TiDelete} from "react-icons/ti";
+import {VscSettings} from "react-icons/vsc";
+const isMobile  = window.innerWidth <= 768;
+const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    rtl: true
+};
 
 const API_KEY = 'AIzaSyD1z1aKy9_iFzifYabztZePoe4Z-OsPU0Q'
 
@@ -49,28 +60,42 @@ const BooksPage = () => {
                     <h1>All Books</h1>
                     <p>Here you can find all the books you need</p>
                 </div>
-                <div className="booksPage__second">
-                    <div className="booksPage__second--main">
-                        <select value={sum} className='select' onChange={getBook}>
-                            <option value='pop'>Sort by Popular</option>
-                            <option value="art">Sort by Art</option>
-                            <option value="biography">Sort by Biography</option>
-                            <option value="fiction">Sort by Romantic</option>
-                            <option value="history">Sort by For kids</option>
-                        </select>
-                        <button onClick={toggleBlock} className='booksPage__second--main__set'><GoSettings /></button>
-                    </div>
-                </div>
+                {/*<div className="booksPage__second">*/}
+                {/*    /!*<div className="booksPage__second--main">*!/*/}
+                {/*    /!*    <p>Sort by</p>*!/*/}
+                {/*    /!*    <select value={sum} className='select' onChange={getBook}>*!/*/}
+                {/*    /!*        <option value='pop'>Popular</option>*!/*/}
+                {/*    /!*        <option value="art">Art</option>*!/*/}
+                {/*    /!*        <option value="biography">Biography</option>*!/*/}
+                {/*    /!*        <option value="fiction">Romantic</option>*!/*/}
+                {/*    /!*        <option value="history">For kids</option>*!/*/}
+                {/*    /!*    </select>*!/*/}
+                {/*    /!*    <button onClick={toggleBlock} className='booksPage__second--main__set'><GoSettings /></button>*!/*/}
+                {/*    /!*</div>*!/*/}
+                {/*</div>*/}
                 <div className="booksPage__third">
-                    <div className="booksPage__third--main">
-                        <h2>Filters</h2>
-                        <a href="">Clear filters</a>
+                    <div className="booksPage__third--mains">
+                        <div className="booksPage__third--mains__text">
+                            <h2>Filters</h2>
+                            <a href="">Clear filters</a>
+                        </div>
+                        <div className="booksPage__third--mains__main">
+                            <p>Sort by</p>
+                            <select value={sum} className='select' onChange={getBook}>
+                                <option value='pop'>Popular</option>
+                                <option value="art">Art</option>
+                                <option value="biography">Biography</option>
+                                <option value="fiction">Romantic</option>
+                                <option value="history">For kids</option>
+                            </select>
+                        </div>
+                        <button onClick={toggleBlock} className='booksPage__third--mains--set'><VscSettings/></button>
                     </div>
                     <h3 className='booksPage__genres' style={{
-                        margin:'24px 0'
+                        margin:"0 0 24px 0"
                     }}>Genres</h3>
-                    <div className="booksPage--block">
-                        <div className="booksPage--block__filter">
+                    <div className="booksPage__third--block">
+                        <div className="booksPage__third--block__filter">
                             <div className="booksPage--block__filter--chec" style={{display:'flex',}}>
                                 <input type="radio"/>
                                 <h2 style={{
@@ -126,23 +151,46 @@ const BooksPage = () => {
                 <div className="booksPage__fourth">
                     {/* Фильтры */}
                 </div>
-                <div className="booksPage__fifth">
-                    {books.map(book => (
-                        <div key={book.id} className={"block"}>
-                            <Link to={`/DetailPage/${book.id}`}>
-                                <img
-                                    src={
-                                        book.volumeInfo.imageLinks
-                                            ? book.volumeInfo.imageLinks.thumbnail
-                                            : 'https://via.placeholder.com/150x200?text=No+Image'
-                                    }
-                                    alt={book.volumeInfo.title}
-                                />
-                            </Link>
-                            <h2>{book.volumeInfo.title}</h2>
-                            <h4>{book.volumeInfo.authors}</h4>
-                        </div>
-                    ))}
+                <div className="booksPage__third--fifth">
+
+                    <div>
+                        {books.slice(0,5).map(book => (
+                            <div key={book.id} className="block">
+                                <Link to={`/DetailPage/${book.id}`}>
+                                    <img
+                                        src={
+                                            book.volumeInfo.imageLinks
+                                                ? book.volumeInfo.imageLinks.thumbnail
+                                                : 'https://via.placeholder.com/150x200?text=No+Image'
+                                        }
+                                        alt={book.volumeInfo.title}
+                                    />
+                                </Link>
+                                <h2>{book.volumeInfo.title}</h2>
+                                <h4>{book.volumeInfo.authors}</h4>
+                            </div>
+                        ))}
+
+                        {books.slice(5,10).map(book => (
+                            <div key={book.id} className={"block"}>
+                                <Link to={`/DetailPage/${book.id}`}>
+                                    <img
+                                        src={
+                                            book.volumeInfo.imageLinks
+                                                ? book.volumeInfo.imageLinks.thumbnail
+                                                : 'https://via.placeholder.com/150x200?text=No+Image'
+                                        }
+                                        alt={book.volumeInfo.title}
+                                    />
+                                </Link>
+                                <h2>{book.volumeInfo.title}</h2>
+                                <h4>{book.volumeInfo.authors}</h4>
+                            </div>
+                        ))}
+                    </div>
+
+
+
                 </div>
                 </div>
                 </div>
