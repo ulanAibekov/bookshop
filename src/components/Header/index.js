@@ -14,7 +14,7 @@ const Header = () => {
                 <div className='header'>
                     <div className='header--title'>
                         <a className="a"
-                          href="#">Bookshop</a>
+                          href="">Bookshop</a>
                         <div className={nav ? 'header--nav active' : 'header--nav'}>
                             <a href="#genres">Categories</a>
                             <a href="#books">Recent</a>
